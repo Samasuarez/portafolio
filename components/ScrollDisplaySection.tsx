@@ -178,7 +178,7 @@ function Particles({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 const PHASES = ["01 · Display", "02 · Código", "03 · Stack"] as const;
 
 function PhasePill({ label, index, active }: { label: string; index: number; active: MotionValue<number> }) {
-  const isActive = useTransform(active, (v) => (v === index ? 1 : 0));
+  const isActive = useTransform(active, (v): number => (v === index ? 1 : 0));
   const color  = useTransform(isActive, [0, 1], ["rgba(148,163,184,1)", "#22d3ee"]);
   const border = useTransform(isActive, [0, 1], ["rgba(255,255,255,0.08)", "rgba(34,211,238,0.40)"]);
   const bg     = useTransform(isActive, [0, 1], ["rgba(255,255,255,0)", "rgba(34,211,238,0.05)"]);
