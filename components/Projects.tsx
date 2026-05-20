@@ -18,7 +18,7 @@ const projects: Project[] = [
   {
     name: "Amatista Propiedades",
     description: "Inmobiliaria · Córdoba, Argentina",
-    long: "Sitio web para inmobiliaria en Córdoba que vende lotes y casas en la montaña y las sierras. Contenido de calidad con tomas de drone para mostrar la naturaleza del entorno.",
+    long: "Sitio web desarrollado para Amatista Propiedades, empresa cordobesa especializada en la venta de casas y lotes en la montaña y las sierras. Incluye contenido visual de alta calidad con tomas aéreas de drone que destacan la naturaleza y los paisajes únicos de cada propiedad.",
     tags: ["Next.js", "React", "Tailwind CSS"],
     live: "https://amatista-propiedades.vercel.app/",
     github: null,
