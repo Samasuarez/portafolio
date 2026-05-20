@@ -191,7 +191,7 @@ function PhasePill({ label, index, active }: { label: string; index: number; act
 }
 
 function Hud({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-  const activeIndex = useTransform(scrollYProgress, (p) => p < 0.20 ? 0 : p < 0.68 ? 1 : 2);
+  const activeIndex = useTransform(scrollYProgress, (p): number => p < 0.20 ? 0 : p < 0.68 ? 1 : 2);
   return (
     <div className="absolute left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full px-3.5 py-2"
       style={{ top: "5%", background: "rgba(10,10,10,0.6)", border: "1px solid rgba(255,255,255,0.08)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", fontSize: 11, color: "#94a3b8", letterSpacing: "0.04em", textTransform: "uppercase" }}>
