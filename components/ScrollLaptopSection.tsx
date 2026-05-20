@@ -226,7 +226,7 @@ function Particles({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 const PHASES = ["01 · Aparecer", "02 · Abrir", "03 · Código", "04 · Stack"] as const;
 
 function PhasePill({ label, index, active }: { label: string; index: number; active: MotionValue<number> }) {
-  const isActive = useTransform(active, (v) => (v === index ? 1 : 0));
+  const isActive = useTransform(active, (v): number => (v === index ? 1 : 0));
   const color  = useTransform(isActive, [0, 1], ["rgba(148,163,184,1)", "#22d3ee"]);
   const border = useTransform(isActive, [0, 1], ["rgba(255,255,255,0.08)", "rgba(34,211,238,0.40)"]);
   const bg     = useTransform(isActive, [0, 1], ["rgba(255,255,255,0)", "rgba(34,211,238,0.05)"]);
@@ -241,7 +241,7 @@ function PhasePill({ label, index, active }: { label: string; index: number; act
 }
 
 function Hud({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
-  const activeIndex = useTransform(scrollYProgress, (p) => p < 0.18 ? 0 : p < 0.42 ? 1 : p < 0.72 ? 2 : 3);
+  const activeIndex = useTransform(scrollYProgress, (p): number => p < 0.18 ? 0 : p < 0.42 ? 1 : p < 0.72 ? 2 : 3);
   return (
     <div
       className="absolute left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-full px-3.5 py-2"
