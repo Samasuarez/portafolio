@@ -5,20 +5,103 @@
   --color-secondary: #8b5cf6;
 }
 
-html {
-  scroll-behavior: smooth;
+/* =====================================================================
+   dev.folio — Design Tokens
+   Samantha Suarez · Full Stack Developer Portfolio
+   ===================================================================== */
+
+:root {
+  /* Background scale */
+  --bg-base:        #0a0a0a;
+  --bg-elev-1:      #111111;
+  --bg-elev-2:      #0d0d0d;
+  --bg-deep:        #080808;
+  --bg-featured:    #0d1a1f;
+
+  /* Foreground scale */
+  --fg-1:           #ffffff;
+  --fg-2:           #f1f5f9;
+  --fg-3:           #cbd5e1;
+  --fg-4:           #94a3b8;
+  --fg-5:           #64748b;
+  --fg-6:           #475569;
+
+  /* Brand accents */
+  --accent-cyan:    #22d3ee;
+  --accent-cyan-h:  #67e8f9;
+  --accent-violet:  #8b5cf6;
+  --accent-violet-2:#a78bfa;
+  --accent-emerald: #34d399;
+  --accent-orange:  #fb923c;
+  --accent-pink:    #f472b6;
+  --accent-yellow:  #facc15;
+
+  /* Code colors */
+  --code-string:    #4ade80;
+  --code-keyword:   #a78bfa;
+  --code-var:       #67e8f9;
+  --code-number:    #fb923c;
+  --code-punct:     #64748b;
+  --code-comment:   #475569;
+
+  /* Lines & surfaces */
+  --line-1:         rgba(255,255,255,0.05);
+  --line-2:         rgba(255,255,255,0.10);
+  --line-3:         rgba(255,255,255,0.20);
+  --line-4:         rgba(255,255,255,0.30);
+  --ghost-1:        rgba(255,255,255,0.03);
+  --ghost-2:        rgba(255,255,255,0.05);
+  --tint-cyan-5:    rgba(34,211,238,0.05);
+  --tint-cyan-20:   rgba(34,211,238,0.20);
+  --tint-violet-5:  rgba(139,92,246,0.05);
+  --tint-violet-20: rgba(139,92,246,0.20);
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(90deg, #22d3ee 0%, #8b5cf6 100%);
+
+  /* Fonts */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Motion */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-base:   200ms;
+  --dur-slow:   600ms;
+
+  /* Radii */
+  --radius-xl:  12px;
+  --radius-2xl: 16px;
+  --radius-full:9999px;
 }
 
-::-webkit-scrollbar {
-  width: 6px;
+/* =====================================================================
+   Base styles
+   ===================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg-base);
+  color: var(--fg-2);
+  font-family: var(--font-sans);
 }
-::-webkit-scrollbar-track {
-  background: #0a0a0a;
+
+body {
+  background: var(--bg-base);
+  -webkit-font-smoothing: antialiased;
 }
-::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
-  border-radius: 3px;
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #444;
+
+.text-gradient-brand {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #444; }
