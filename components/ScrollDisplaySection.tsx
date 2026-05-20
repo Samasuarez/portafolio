@@ -213,7 +213,7 @@ export default function ScrollDisplaySection() {
   const displayY       = useTransform(scrollYProgress, [0, 0.15], [40, 0]);
 
   return (
-    <section ref={ref} className="relative bg-[#0a0a0a]" style={{ height: "500vh" }} aria-label="Cómo trabajo — animación de scroll">
+    <section ref={ref} className="relative bg-[#0a0a0a]" style={{ height: "300vh" }} aria-label="Cómo trabajo — animación de scroll">
       <div className="sticky top-0 h-screen w-full overflow-hidden" style={{ perspective: "2000px", perspectiveOrigin: "50% 50%" }}>
 
         <div aria-hidden className="pointer-events-none absolute rounded-full"
