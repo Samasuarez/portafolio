@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Instagram } from "lucide-react";
 
 const techBadges = [
   "Python",
@@ -28,9 +28,9 @@ const stats = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Samasuarez?tab=repositories", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/samantha-suarez-rico/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/sama_developer/", label: "Instagram" },
 ];
 
 export default function Hero() {

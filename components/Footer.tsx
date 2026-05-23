@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
+import { Code2, Github, Linkedin, Instagram, Mail, ArrowUpRight } from "lucide-react";
 
 const footerLinks: Record<string, string[]> = {
   Servicios: ["Landing Pages", "Apps Web", "Diseño UI/UX", "SEO & Performance"],
@@ -7,9 +7,9 @@ const footerLinks: Record<string, string[]> = {
 };
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Samasuarez?tab=repositories", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/samantha-suarez-rico/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/sama_developer/", label: "Instagram" },
   { icon: Mail, href: "mailto:joublinsuarez@gmail.com", label: "Email" },
 ];
 
